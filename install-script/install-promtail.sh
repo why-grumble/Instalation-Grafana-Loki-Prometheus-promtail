@@ -6,7 +6,7 @@ nc='\033[0m'
 helpFunction()
 {
    echo ""
-   echo "Utilisation: $0 -s http://10.0.0.5:9100 -l /usr/local/bin/"
+   echo "Utilisation: $0 -s 10.0.0.5:9100 -l /usr/local/bin/"
    echo ""
    echo ""
    echo -e "\t-h Afficher l'aide"
@@ -58,7 +58,7 @@ positions:
   filename: ${parametreLOC}/promtail/tmp/positions.yaml
 
 clients:
-  - url: ${parametreIP}/loki/api/v1/push
+  - url: http://${parametreIP}:9100/loki/api/v1/push
 
 scrape_configs:
  - job_name: system
