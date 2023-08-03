@@ -4,7 +4,7 @@
 Sous Linux
 
 ```bash
-  git clone https://github.com/why-grumble/Instalation-Grafana-Loki-Prometheus-promtail_Linux
+git clone https://github.com/why-grumble/Instalation-Grafana-Loki-Prometheus-promtail_Linux
 ```
 Chaque service va s'installer avec leur port par défaut, si vous souhaitez le changer libre à vous de modifier le script.
 ## install-grafana-loki-prometheus.sh
