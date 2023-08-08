@@ -18,7 +18,7 @@ scrape_configs:
       exclude_user_data: true
       exclude_event_data: true
       bookmark_path: "./tmp/bookmark-application.xml"
-      locale: 0
+      locale: 0 #Utilise la description dans la langue du systeme
 
   - job_name: windows-system
     windows_events: 
@@ -29,4 +29,4 @@ scrape_configs:
       exclude_user_data: true
       exclude_event_data: true
       bookmark_path: "./tmp/bookmark-system.xml"
-      locale: 0
+      locale: 0 #Utilise la description dans la langue du systeme
