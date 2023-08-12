@@ -1,7 +1,7 @@
 # Installation
 
 
-## WMI (Prometheus)
+## WMI (Prometheus) [Dépot](https://github.com/prometheus-community/windows_exporter)
 
 Windows exporter possède un .msi ce qui l'installera en tant que service avec un démarrage automatique, les options voulues ne sont disponible qu'à l'installation, si vous voulez les changer, il vous faudra réinstaller le package.
 
