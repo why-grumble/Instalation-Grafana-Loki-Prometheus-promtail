@@ -1,6 +1,5 @@
 # Installation
 
-
 ## WMI (Prometheus) [Dépot](https://github.com/prometheus-community/windows_exporter)
 
 Windows exporter possède un .msi ce qui l'installera en tant que service avec un démarrage automatique, les options voulues ne sont disponible qu'à l'installation, si vous voulez les changer, il vous faudra réinstaller le package.
@@ -24,6 +23,8 @@ Fichier de configuration de Prometheus sur le serveur de centralisation
 ```
 
 ## Promtail
+
+[Via Script](https://github.com/why-grumble/Instalation-Grafana-Loki-Prometheus-promtail/releases/tag/windows)
 
 ```bash
 ./promtail --config.file=local-config.yml
