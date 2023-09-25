@@ -50,7 +50,7 @@ sleep 2
 sudo mkdir ${parametreLOC}/loki ${parametreLOC}/prometheus
 
 cd ${parametreLOC}/loki/
-sudo wget https://github.com/grafana/loki/releases/download/v2.8.2/loki-linux-amd64.zip
+sudo wget https://github.com/grafana/loki/releases/download/v2.9.1/loki-linux-amd64.zip
 sudo unzip loki-*
 sudo rm *.zip
 sudo mv loki-* loki
@@ -99,7 +99,7 @@ ruler:
 EOF
 
 cd ${parametreLOC}/prometheus/
-sudo wget https://github.com/prometheus/prometheus/releases/download/v2.45.0/prometheus-2.45.0.linux-amd64.tar.gz
+sudo wget https://github.com/prometheus/prometheus/releases/download/v2.47.0/prometheus-2.47.0.linux-amd64.tar.gz
 sudo tar xvfz prometheus-*.tar.gz
 
 sudo useradd -s /sbin/nologin prometheus
