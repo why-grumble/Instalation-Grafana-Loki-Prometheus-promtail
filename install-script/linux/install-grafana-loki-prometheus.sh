@@ -37,7 +37,7 @@ then
 fi
 
 sudo apt-get update
-sudo apt-get install wget unzip
+sudo apt-get install wget unzip -y
 
 echo "Ajout du dépot grafana et installation de wget, unzip, software-properties-common, apt-transport-https et grafana"
 sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
