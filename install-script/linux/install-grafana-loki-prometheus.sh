@@ -36,12 +36,14 @@ then
    parametreLOC="/usr/local/bin";
 fi
 
+sudo apt-get update
+sudo apt-get install wget unzip
 
 echo "Ajout du dépot grafana et installation de wget, unzip, software-properties-common, apt-transport-https et grafana"
 sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
 echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
 sudo apt-get update
-sudo apt-get install wget unzip software-properties-common apt-transport-https grafana -y
+sudo apt-get install software-properties-common apt-transport-https grafana -y
 echo "Installation terminé"
 echo "Installation de Loki pour une ecoute sur" $parametreIP
 
