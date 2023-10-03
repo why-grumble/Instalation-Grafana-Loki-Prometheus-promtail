@@ -44,7 +44,7 @@ sleep 2
 
 sudo mkdir ${parametreLOC}/promtail ${parametreLOC}/promtail/tmp
 cd ${parametreLOC}/promtail/
-sudo wget https://github.com/grafana/loki/releases/download/v2.8.2/promtail-linux-amd64.zip
+sudo wget https://github.com/grafana/loki/releases/download/v2.9.1/promtail-linux-amd64.zip
 sudo unzip promtail*
 sudo rm *.zip
 sudo mv promtail* promtail
