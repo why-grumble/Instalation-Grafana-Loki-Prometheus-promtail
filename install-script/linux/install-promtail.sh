@@ -58,7 +58,7 @@ positions:
   filename: ${parametreLOC}/promtail/tmp/positions.yaml
 
 clients:
-  - url: http://${parametreIP}:9100/loki/api/v1/push
+  - url: http://${parametreIP}:3100/loki/api/v1/push
 
 scrape_configs:
  - job_name: system
