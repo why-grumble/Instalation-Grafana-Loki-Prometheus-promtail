@@ -49,7 +49,7 @@ echo "Installation de Loki pour une ecoute sur" $parametreIP
 
 sleep 2
 
-sudo mkdir ${parametreLOC}/loki ${parametreLOC}/prometheus
+sudo mkdir ${parametreLOC}/loki
 
 cd ${parametreLOC}/loki/
 sudo wget https://github.com/grafana/loki/releases/download/v2.9.1/loki-linux-amd64.zip
@@ -100,9 +100,10 @@ ruler:
 
 EOF
 
-cd ${parametreLOC}/prometheus/
+cd ${parametreLOC}/
 sudo wget https://github.com/prometheus/prometheus/releases/download/v2.47.0/prometheus-2.47.0.linux-amd64.tar.gz
 sudo tar xvfz prometheus-*.tar.gz
+mv prometheus-* prometheus
 
 sudo useradd -s /sbin/nologin prometheus
 chown prometheus prometheus /usr/local/bin/prometheus -R
@@ -146,10 +147,10 @@ After=network-online.target
 User=prometheus
 Group=prometheus
 Type=simple
-ExecStart= ${parametreLOC}/prometheus/prometheus --config.file {parametreLOC}/prometheus/prometheus.yml \
---storage.tsdb.path={parametreLOC}/prometheus/ \
---web.console.templates={parametreLOC}/prometheus/consoles \
---web.console.libraries={parametreLOC}/prometheus/console_libraries
+ExecStart= ${parametreLOC}/prometheus/prometheus --config.file ${parametreLOC}/prometheus/prometheus.yml \
+--storage.tsdb.path=${parametreLOC}/prometheus/ \
+--web.console.templates=${parametreLOC}/prometheus/consoles \
+--web.console.libraries=${parametreLOC}/prometheus/console_libraries
 
 [Install]
 WantedBy=multi-user.target
