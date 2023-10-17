@@ -6,7 +6,7 @@ nc='\033[0m'
 helpFunction()
 {
    echo ""
-   echo "Utilisation: $0 -s 10.0.0.5:3100 -l /usr/local/bin/"
+   echo "Utilisation: $0 -s 10.0.0.5 -l /usr/local/bin/"
    echo ""
    echo ""
    echo -e "\t-h Afficher l'aide"
