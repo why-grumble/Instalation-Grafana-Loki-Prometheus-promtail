@@ -3,6 +3,7 @@ sudo apt-get install wget -y
 cd /usr/local/bin
 sudo wget https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
 tar xvfz node_exporter-*.*-amd64.tar.gz
+rm *.tar.gz
 mv node_exporter-* node_exporter
 sudo useradd -s /sbin/nologin node_exporter
 sudo chown node_exporter: /usr/local/bin/node_exporter -R
